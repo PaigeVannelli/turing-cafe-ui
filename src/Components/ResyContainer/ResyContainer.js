@@ -1,5 +1,6 @@
 import React from 'react'
 import Reservation from '../Reservation/Reservation.js'
+import './ResyContainer.css'
 
 const ResyContainer = ({reservations}) => {
 
@@ -15,7 +16,7 @@ const ResyContainer = ({reservations}) => {
     })
 
     return (
-        <section>
+        <section className='reservations-section'>
             {allReservations}
         </section>
     )

@@ -1,8 +1,9 @@
 .reservation-card {
-    height: 12em;
-    width: 17em;
-    border: 5px solid;
+    height: 13em;
+    width: 15em;
+    border: 6px solid;
     border-radius: 4%;
     background-color: rgb(252, 252, 252);
     color: teal;
+    margin: 15px;
 }

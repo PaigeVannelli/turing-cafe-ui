@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import './ReservationForm.css'
 
 class ReservationForm extends Component {
     constructor() {
@@ -15,34 +16,38 @@ class ReservationForm extends Component {
         return (
             <form>
                 <input
+                className='form-input'
                 type='text'
-                placeholder='name'
+                placeholder='Name'
                 name='name'
                 value={this.state.name}
                 // onChange={event => this.handleChange(event)}
                 />
                 <input
+                className='form-input'
                 type='text'
-                placeholder='date'
+                placeholder='Date (mm/dd)'
                 name='date'
                 value={this.state.date}
                 // onChange={event => this.handleChange(event)}
                 />
                 <input
+                className='form-input'
                 type='text'
-                placeholder='time'
+                placeholder='Time'
                 name='time'
                 value={this.state.time}
                 // onChange={event => this.handleChange(event)}
                 />
                 <input
+                className='form-input'
                 type='text'
-                placeholder='number'
+                placeholder='Number of guests'
                 name='number'
                 value={this.state.number}
                 // onChange={event => this.handleChange(event)}
                 />
-                <button>Make Reservation</button>
+                <button className='make-reservation-button'>Make Reservation</button>
             </form>
         )
     }

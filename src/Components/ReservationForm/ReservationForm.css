@@ -1,0 +1,14 @@
+.form-input {
+    height: 2em;
+    width: 16em;
+    margin: 0 15px 30px 15px;
+}
+
+.make-reservation-button {
+    height: 2.4em;
+    width: 16em;
+    margin-left: 10px;
+    background-color: teal;
+    color: rgb(252, 252, 252);
+    border: 1px solid grey;
+}

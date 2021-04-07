@@ -67,7 +67,8 @@ class ReservationForm extends Component {
                 />
                 <button 
                 className='make-reservation-button'
-                onClick={event => this.submitReservation(event)}>
+                onClick={event => this.submitReservation(event)}
+                data-cy='reservation-button'>
                 Make Reservation
                 </button>
             </form>

@@ -1,20 +1,23 @@
 import React from 'react'
+import Reservation from '../Reservation/Reservation.js'
 
 const ResyContainer = ({reservations}) => {
 
     const allReservations = reservations.map(reservation => {
         return (
-            <article>
-                <h1>{reservation.name}</h1>
-                <p>{reservation.date}</p>
-                <p>{reservation.time} pm</p>
-                <p>Number of guests: {reservation.number}</p>
-            </article>
+            <Reservation 
+            name={reservation.name}
+            date={reservation.date}
+            time={reservation.time}
+            number={reservation.number}
+            />
         )
     })
 
     return (
-        <h1>test</h1>
+        <section>
+            {allReservations}
+        </section>
     )
 }
 

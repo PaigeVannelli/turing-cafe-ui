@@ -1,13 +1,15 @@
 import React from 'react'
 
-const Reservation = () => {
-    
+const Reservation = ({name, date, time, number}) => {
+
     return (
         <article>
-            <h1>{reservation.name}</h1>
-            <p>{reservation.date}</p>
-            <p>{reservation.time} pm</p>
-            <p>Number of guests: {reservation.number}</p>
+            <h1>{name}</h1>
+            <p>{date}</p>
+            <p>{time} pm</p>
+            <p>Number of guests: {number}</p>
         </article>
     )
 }
+
+export default Reservation

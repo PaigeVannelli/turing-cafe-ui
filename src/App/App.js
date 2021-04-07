@@ -28,11 +28,20 @@ class App extends Component {
     })
   }
 
-  deleteReservation = (id) => {
-    const filteredReservations = this.state.reservations.filter(reservation => {
-      return reservation.id !== id
+  deleteReservation = async (id) => {
+    const deleteResponse = await fetch(`http://localhost:3001/api/v1/reservations/${id}`, {
+      method: 'DELETE'
     })
-    this.setState({reservations: filteredReservations})
+    if (deleteResponse.ok) {
+      fetch('http://localhost:3001/api/v1/reservations')
+      .then(data => data.json())
+      .then(reservations => {
+        console.log(reservations)
+        this.setState({reservations: reservations})
+      })
+    } else {
+      console.log('Reservation could not be delete. Please try again later')
+    }
   }
 
   render() {

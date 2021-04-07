@@ -28,15 +28,22 @@ class App extends Component {
     })
   }
 
+  deleteReservation = (id) => {
+    const filteredReservations = this.state.reservations.filter(reservation => {
+      return reservation.id !== id
+    })
+    this.setState({reservations: filteredReservations})
+  }
+
   render() {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-        <ReservationForm addReservation={this.addReservation}/>
+          <ReservationForm addReservation={this.addReservation}/>
         </div>
         <div className='resy-container'>
-          <ResyContainer reservations={this.state.reservations}/>
+          <ResyContainer reservations={this.state.reservations} deleteReservation={this.deleteReservation}/>
         </div>
       </div>
     )

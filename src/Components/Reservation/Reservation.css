@@ -7,3 +7,11 @@
     color: teal;
     margin: 15px;
 }
+
+.cancel-button {
+    background-color: teal;
+    color:rgb(252, 252, 252);
+    height: 2em;
+    width: 14em;
+    border: 1px solid grey;
+}

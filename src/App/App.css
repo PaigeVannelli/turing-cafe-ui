@@ -17,3 +17,12 @@
   font-family: 'Pacifico', cursive;
   font-size: 50px;
 }
+
+.view-menu-button {
+    height: 2.4em;
+    width: 16em;
+    margin-left: 10px;
+    background-color: teal;
+    color: rgb(252, 252, 252);
+    border: 1px solid grey;
+}
